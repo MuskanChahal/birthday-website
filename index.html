@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Beautiful Memories</title>
+  <meta charset="UTF-8">
+  <title>Our Memories 💖</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff0f5;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff5f8;
       text-align: center;
+      color: #333;
     }
 
     h2 {
-      font-size: 2em;
       margin-top: 30px;
-      color: #e75480;
-    }
-
-    .heart {
-      animation: pulse 1s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-      100% { transform: scale(1); }
+      font-size: 32px;
+      color: #e91e63;
     }
 
     .slideshow-container {
@@ -43,16 +32,21 @@
       width: 100%;
       display: none;
       border-radius: 20px;
+      transition: opacity 1s ease-in-out;
     }
 
     .slide.active {
       display: block;
     }
 
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #999;
+    .heart {
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
@@ -61,35 +55,35 @@
   <h2>Our Beautiful Memories <span class="heart">💫</span></h2>
 
   <div class="slideshow-container">
-    <img class="slide" src="IMG-20250720-WA0042.jpg" alt="Memory 1">
+    <img class="slide active" src="IMG-20250720-WA0042.jpg" alt="Memory 1">
     <img class="slide" src="IMG-20250720-WA0048.jpg" alt="Memory 2">
     <img class="slide" src="IMG-20250720-WA0050.jpg" alt="Memory 3">
     <img class="slide" src="IMG-20250720-WA0054.jpg" alt="Memory 4">
-    <!-- Add more <img> lines here if you have more pictures -->
+    <!-- Add more <img> tags as needed -->
   </div>
 
-  <footer>Made with ❤️ for us</footer>
-
   <script>
-    let slides = document.querySelectorAll(".slide");
-    let current = 0;
+    const slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
 
     function showSlide(index) {
-      slides.forEach((img, i) => {
-        img.classList.remove("active");
-        if (i === index) img.classList.add("active");
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+        }
       });
     }
 
     function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
     }
 
-    showSlide(current);
     setInterval(nextSlide, 3000); // Change image every 3 seconds
   </script>
 
 </body>
 </html>
+
 
