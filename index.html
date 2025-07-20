@@ -377,36 +377,37 @@
             </div>
         </div>
         
-        <!-- Step 3: Memories -->
-        <div class="step" id="step3">
-            <h2>Our Beautiful Memories <span class="heart">💫</span></h2>
-            <div class="content-box">
-                <div class="memories-grid">
-                    <div class="memory">
-                        <div class="memory-title">First Date Magic ✨</div>
-                        <div>That perfect evening when we talked for hours and I knew you were special</div>
-                    </div>
-                    <div class="memory">
-                        <div class="memory-title">Movie Night Cuddles 🍿</div>
-                        <div>All those cozy nights watching movies and falling asleep in each other's arms</div>
-                    </div>
-                    <div class="memory">
-                        <div class="memory-title">Adventure Together 🚗</div>
-                        <div>Our spontaneous road trip where we got lost but found so much joy</div>
-                    </div>
-                    <div class="memory">
-                        <div class="memory-title">Cooking Disasters 👨‍🍳</div>
-                        <div>When we tried to make dinner and ended up ordering pizza, laughing the whole time</div>
-                    </div>
-                    <div class="memory">
-                        <div class="memory-title">Sunrise Moments 🌅</div>
-                        <div>Watching the sunrise together and feeling like we could conquer the world</div>
-                    </div>
-                    <div class="memory">
-                        <div class="memory-title">Inside Jokes 😂</div>
-                        <div>All our silly moments that only we understand and make us burst into laughter</div>
-                    </div>
-                </div>
+        <!-- 3: Memories -->
+<div class="step" id="step3">
+  <h2>Our Beautiful Memories <span class="heart">💫</span></h2>
+  <div class="content-box">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="IMG-20250720-WA0003.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG-20250720-WA0004.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG-20250720-WA0005.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+</div>
             </div>
             <div class="navigation">
                 <button class="btn" onclick="prevStep()">← Back</button>
@@ -638,6 +639,37 @@
                 prevStep();
             }
         });
+        <div class="slideshow-container">
+  <img class="mySlides" src="IMG-20250720-WA0003.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0004.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0005.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0006.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0007.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0036.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0042.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0043.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0044.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0045.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0046.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0047.jpg" style="width:100%">
+  <img class="mySlides" src="IMG-20250720-WA0048.jpg" style="width:100%">
+</div>
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9621780f15188aeb',t:'MTc1MzAwNDEzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    <script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }    
+    slides[slideIndex - 1].style.display = "block";  
+    setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+  }
+</script>
+</body>
 </html>
